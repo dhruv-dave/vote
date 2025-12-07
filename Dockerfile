@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN pip install --trusted-host -r requirements.txt
+RUN pip install --trusted-host pypi.org -r requirements.txt
 
 EXPOSE 80
 
