@@ -1,10 +1,10 @@
-FROM python:alpine3.17
+FROM docker-registry-remote.artifactory-espoo2.int.net.nokia.com/python:alpine3.17
 
 WORKDIR /app
 
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN pip install --trusted-host -r requirements.txt
 
 EXPOSE 80
 
